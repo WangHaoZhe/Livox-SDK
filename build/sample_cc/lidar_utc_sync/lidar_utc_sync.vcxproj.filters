@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Robomaster\Livox-SDK\sample_cc\lidar_utc_sync\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Robomaster\Livox-SDK\sample_cc\lidar_utc_sync\lds_lidar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Robomaster\Livox-SDK\sample_cc\lidar_utc_sync\synchro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Robomaster\Livox-SDK\sample_cc\lidar_utc_sync\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{47A96475-39E4-358A-9993-9509A305430C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -148,7 +148,7 @@ void LdsLidar::GetLidarDataCb(uint8_t handle, LivoxEthPacket *data,
 
   if (eth_packet) {
     lidar_this->data_recveive_count_[handle] ++;
-    if (lidar_this->data_recveive_count_[handle] % 100 == 0) {
+    if (lidar_this->data_recveive_count_[handle] % 1 == 0) {
       printf("receive packet count %d %d\n", handle, lidar_this->data_recveive_count_[handle]);
 
       /** Parsing the timestamp and the point cloud data. */
@@ -161,6 +161,7 @@ void LdsLidar::GetLidarDataCb(uint8_t handle, LivoxEthPacket *data,
         LivoxExtendRawPoint *p_point_data = (LivoxExtendRawPoint *)data->data;
       }else if ( data ->data_type == kExtendSpherical) {
         LivoxExtendSpherPoint *p_point_data = (LivoxExtendSpherPoint *)data->data;
+        printf("point %d (%d, %d, %d)\n", lidar_this->data_recveive_count_[handle], p_point_data->depth, p_point_data->theta, p_point_data->phi);
       }else if ( data ->data_type == kDualExtendCartesian) {
         LivoxDualExtendRawPoint *p_point_data = (LivoxDualExtendRawPoint *)data->data;
       }else if ( data ->data_type == kDualExtendSpherical) {
@@ -206,7 +207,7 @@ void LdsLidar::OnDeviceBroadcast(const BroadcastDeviceInfo *info) {
     p_lidar->connect_state = kConnectStateOff;
     p_lidar->config.enable_fan = true;
     p_lidar->config.return_mode = kStrongestReturn;
-    p_lidar->config.coordinate = kCoordinateCartesian;
+    p_lidar->config.coordinate = kCoordinateSpherical;
     p_lidar->config.imu_rate = kImuFreq200Hz;
   } else {
     printf("Add lidar to connect is failed : %d %d \n", result, handle);

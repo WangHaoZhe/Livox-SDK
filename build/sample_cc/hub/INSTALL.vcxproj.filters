@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Robomaster\Livox-SDK\build\CMakeFiles\ebd65cdddcf27092c064a8128a907b1e\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A633DD19-C592-31B6-8314-13B235CC48FB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

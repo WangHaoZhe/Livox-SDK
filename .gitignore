@@ -8,6 +8,8 @@ build/CMakeFiles
 build/sdk_core
 build/sample
 
+.vs
+
 #whitelist
 !build/notes.txt
 
